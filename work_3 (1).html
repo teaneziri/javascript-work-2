@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Work 3</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Work 3</h2>
+
+    <script>
+      /*
+       * Create function filter(arr, fn), that
+       *  - receives massive arr and function fn as arguments of massive 
+       *  - restores new massive that contains only arr elements, for which fn restores true.
+       */
+
+      const arr = [11, 66, 33, 44, 22, 55, 2];
+
+      function filter(arr, fn) {
+        // to do
+        const res=[];
+
+        arr.forEach(function(item){
+            if(fn(item)){
+                res.push(item)
+            }
+        })
+        return res;
+      }
+
+      // Verification - restore massive with elements which value is more than 50 
+      const filteredArr = filter(arr, function (item) {
+        return item>50
+      });
+
+      console.log(filteredArr); //   [66, 55]]
+    </script>
+  </body>
+</html>
